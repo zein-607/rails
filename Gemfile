@@ -11,7 +11,7 @@ gem "rake", ">= 13"
 gem "releaser", path: "tools/releaser"
 
 gem "sprockets-rails", ">= 2.0.0", require: false
-gem "propshaft", ">= 0.1.7", "!= 1.0.1"
+gem "propshaft", ">= 1.2.0"
 gem "capybara", ">= 3.39"
 gem "selenium-webdriver", ">= 4.20.0"
 
@@ -48,15 +48,15 @@ gem "prism"
 group :rubocop do
   # Rubocop has to be locked in the Gemfile because CI ignores Gemfile.lock
   # We don't want rubocop to start failing whenever rubocop makes a new release.
-  gem "rubocop", "< 1.73", require: false
-  gem "rubocop-minitest", require: false
-  gem "rubocop-packaging", require: false
-  gem "rubocop-performance", require: false
-  gem "rubocop-rails", require: false
-  gem "rubocop-md", require: false
+  gem "rubocop", "~> 1.73", require: false
+  gem "rubocop-minitest", ">= 0.38.0", require: false
+  gem "rubocop-packaging", ">= 0.6.0", require: false
+  gem "rubocop-performance", ">= 1.25.0", require: false
+  gem "rubocop-rails", ">= 2.31.0", require: false
+  gem "rubocop-md", ">= 2.0.1", require: false
 
   # This gem is used in Railties tests so it must be a development dependency.
-  gem "rubocop-rails-omakase", require: false
+  gem "rubocop-rails-omakase", ">= 1.1.0", require: false
 end
 
 group :mdl do
@@ -100,7 +100,7 @@ gem "useragent", require: false
 group :job do
   gem "resque", require: false
   gem "resque-scheduler", require: false
-  gem "sidekiq", require: false
+  gem "sidekiq", ">= 7.3.8", require: false
   gem "sucker_punch", require: false
   gem "queue_classic", ">= 4.0.0", require: false, platforms: :ruby
   gem "sneakers", require: false
