@@ -98,8 +98,8 @@ gem "useragent", require: false
 
 # Active Job
 group :job do
-  gem "resque", require: false
-  gem "resque-scheduler", require: false
+  gem "resque", ">= 3.0.0", require: false
+  gem "resque-scheduler", ">= 5.0.0", require: false
   gem "sidekiq", require: false
   gem "sucker_punch", require: false
   gem "queue_classic", ">= 4.0.0", require: false, platforms: :ruby
